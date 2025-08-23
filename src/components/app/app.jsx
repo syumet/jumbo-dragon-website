@@ -1,7 +1,5 @@
 import { Navbar, Image } from "react-bootstrap";
-import { Route, useHistory } from "react-router-dom";
-import { useEffect } from "react";
-// import ReactGA from "react-ga";
+import { Route } from "react-router-dom";
 import { Home } from "../home/home";
 import { Menu } from "../menu/menu";
 
@@ -15,15 +13,15 @@ const navItems = [
 
 export default function App() {
 
-  const history = useHistory();
-  useEffect(() => {
-    if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
-      sendToGoogleAnalytics(history.location);
-      history.listen(location => {
-        sendToGoogleAnalytics(location);
-      });
-    }
-  }, [history]);
+  // const history = useHistory();
+  // useEffect(() => {
+  //   if (location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+  //     sendToGoogleAnalytics(history.location);
+  //     history.listen(location => {
+  //       sendToGoogleAnalytics(location);
+  //     });
+  //   }
+  // }, [history]);
 
   return (
     <div className="App">
@@ -60,7 +58,7 @@ export default function App() {
 
       <Navbar id="aaa" sticky="bottom" variant="dark" bg="dark">
         <Navbar.Brand className="mx-auto footer-text">
-          © 2023 Jumbo Dragon Chinese Restaurant | Brantford
+          © 2025 Jumbo Dragon Chinese Restaurant | Brantford
         </Navbar.Brand>
       </Navbar>
     </div>
